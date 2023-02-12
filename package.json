@@ -7,7 +7,7 @@
     "spdl": "./bin/run"
   },
   "homepage": "https://github.com/bumbummen99/southpark-downloader",
-  "license": "GPL-3",
+  "license": "MIT",
   "main": "dist/index.js",
   "repository": "bumbummen99/southpark-downloader",
   "files": [
