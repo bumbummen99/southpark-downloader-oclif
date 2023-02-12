@@ -1,3 +1,5 @@
-export const types = {
-  Database: Symbol.for('Database'),
+export const TDatabaseSymbol  = Symbol.for('Database')
+
+export default {
+  TDatabaseSymbol,
 }

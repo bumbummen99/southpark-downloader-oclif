@@ -1,16 +1,24 @@
 import { Hook } from '@oclif/core'
-import { Container } from 'inversify'
-import { types } from '../../ioc/types'
+import { TDatabaseSymbol } from '../../ioc/types'
 import Database from '../../south-park/database'
 
 const hook: Hook<'init'> = async function () {
-  /* Boot the IoC container */
-  const { default: container }: { default: Container } = await import('../../ioc/container')
+  /* Create new InversifyJS IoC container */
+  this.log('Booting IoC container...')
+  const { default: container } = await import('../../ioc/container')
 
-  /* Load the database */
-  await container.get<Database>(types.Database).load()
+  /* Bind and load the episode database */
+  container.bind<string>('test').toConstantValue('Hello, world!')
+  this.log(`IoC test value is: ${await container.get<string>('test')}`)
 
-  process.stdout.write('Application booted!\n')
+  this.log('Binding Database instance')
+  container.bind<Database>(TDatabaseSymbol).to(Database).inSingletonScope()
+  this.log('Bound Database to container!')
+
+  this.log('Loading database.json...')
+  //await container.get<Database>(types.Database).load()
+
+  this.log('Application booted!')
 }
 
 export default hook

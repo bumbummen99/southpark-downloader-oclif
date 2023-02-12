@@ -1,7 +1,6 @@
 import { existsSync } from 'node:fs'
 import { readFile, writeFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
-import fetch from 'node-fetch'
+//import fetch from 'node-fetch'
 
 export default class Database {
   /**
@@ -10,14 +9,14 @@ export default class Database {
   public static url = 'https://raw.githubusercontent.com/bumbummen99/southpark-downloader/database/database.json'
 
   /**
-   * Defines the path to the local copy of the database.json file.
+   * Defines the absolute path to the local copy of the database.json file.
    */
-  public static path = resolve('/database.json')
+  public static path = '/database.json'
 
   /**
    * Holds the loaded data of the database.json file.
    */
-  private data?: Episode[]
+  private data: Episode[] = []
 
   /**
    * Load the local database.json file and populate the data property.
