@@ -17,7 +17,7 @@ export default class Database {
   /**
    * Holds the loaded data of the database.json file.
    */
-  private data?: any
+  private data?: Episode[]
 
   /**
    * Load the local database.json file and populate the data property.
