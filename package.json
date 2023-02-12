@@ -19,7 +19,9 @@
   "dependencies": {
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.3.0"
+    "@oclif/plugin-plugins": "^2.3.0",
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.5",
@@ -50,6 +52,9 @@
       "hello": {
         "description": "Say hello to the world and others"
       }
+    },
+    "hooks": {
+      "init": "./dist/hooks/init/bootstrap"
     }
   },
   "scripts": {
