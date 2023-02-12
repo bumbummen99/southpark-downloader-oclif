@@ -21,4 +21,4 @@ jobs:
             npm config set timeout 600000
             npm i
       - run: npm run build
-      - run: npm run test
+      - run: docker compose exec --rm --entrypoint npm spdl run test
