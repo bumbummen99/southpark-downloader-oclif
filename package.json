@@ -21,7 +21,8 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.3.0",
     "inversify": "^6.0.1",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "youtube-dl-exec": "^2.2.3"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.5",
