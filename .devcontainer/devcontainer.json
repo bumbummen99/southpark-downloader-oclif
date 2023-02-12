@@ -25,5 +25,5 @@
         "ghcr.io/devcontainers/features/node:1": {}
     },
     "remoteUser": "vscode",
-    "initializeCommand": ".devcontainer/lifecycle/preCreate"
+    "postCreateCommand": ".devcontainer/lifecycle/postCreate"
 }
