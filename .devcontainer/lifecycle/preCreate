@@ -3,10 +3,13 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 
 # Install NodeJS LTS
+echo "Use LTS version of NodeJS..."
 /.nvm/nvm.sh install --lts
 
 # Change working directory to project root
+echo "Changing working directory..."
 cd $SCRIPT_DIR/../../
 
 # Install project dependencies
+echo "Installing dependencies..."
 npm i
