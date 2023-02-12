@@ -17,8 +17,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node_version }}
-      - run: |
-            npm config set timeout 600000
-            npm i
+      - run: npm i
       - run: npm run build
       - run: docker compose exec --rm --entrypoint npm spdl run test
