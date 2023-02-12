@@ -5,5 +5,6 @@ describe('hooks', () => {
   .stdout()
   .hook('init', {id: 'hello world'})
   .do(output => expect(output.stdout).to.contain('Initializing IoC...'))
-  .it('does initialize IoC')
+  .do(output => expect(output.stdout).to.contain('Loading database.json...'))
+  .it('does boot successfully')
 })
