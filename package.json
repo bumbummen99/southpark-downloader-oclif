@@ -23,7 +23,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "inversify": "^6.0.1",
     "reflect-metadata": "^0.1.13",
-    "youtube-dl-exec": "^2.2.3"
+    "youtube-dl-exec": "^2.4.0"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.5",
